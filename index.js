@@ -88,5 +88,5 @@ client.on("message", async(message) => {
     }
 });
 
-//pp.listen(process.env.PORT || 3000)
+//pp.listen(process.env.PORT || 300)
 app.listen(process.env.PORT || 3000)
