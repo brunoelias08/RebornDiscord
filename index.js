@@ -88,5 +88,11 @@ client.on("message", async(message) => {
     }
 });
 
+client.on('message', message => {
+    if (message.content === '-p3') {
+        message.channel.send('!b live BR bea peladinha');
+    }
+});
+
 //pp.listen(process.env.PORT || 300)
 app.listen(process.env.PORT || 3000)
