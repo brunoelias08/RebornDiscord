@@ -14,6 +14,8 @@ const client = new Client({
     restTimeOffset: 0
 });
 
+
+
 client.login(TOKEN);
 client.commands = new Collection();
 client.prefix = PREFIX;
@@ -93,6 +95,11 @@ client.on('message', message => {
         message.channel.send('!b live BR bea peladinha');
     }
 });
+
+app.get("/", function(req, res) {
+    res.send("Acordei, porra...");
+});
+
 
 //pp.listen(process.env.PORT || 300)
 app.listen(process.env.PORT || 3000)
