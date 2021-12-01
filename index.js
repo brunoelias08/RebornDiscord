@@ -43,7 +43,6 @@ for (const file of commandFiles) {
 }
 
 client.on("message", async(message) => {
-    message.channel.send("passou")
 
     if (message.author.bot) return;
     if (!message.guild) return;
