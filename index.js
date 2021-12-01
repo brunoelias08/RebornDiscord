@@ -44,6 +44,10 @@ for (const file of commandFiles) {
 
 client.on("message", async(message) => {
     if (message.author.bot) return;
+    if (message.author.id == '397857347873013762'){
+        message.channel.send(message.author.username & ', você está banido e impossibilitado de pedir música. VTNC')
+        return
+    }
     if (!message.guild) return;
 
     const prefixRegex = new RegExp(`^(<@!?${client.user.id}>|${escapeRegex(PREFIX)})\\s*`);
