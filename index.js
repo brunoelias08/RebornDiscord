@@ -44,11 +44,17 @@ for (const file of commandFiles) {
 
 client.on("message", async(message) => {
     if (message.author.bot) return;
-    message.channel.send(message.author.id)
+   
+
+    if (!message.guild) return;
+
+    const prefixRegex = new RegExp(`^(<@!?${client.user.id}>|${escapeRegex(PREFIX)})\\s*`);
+    if (!prefixRegex.test(message.content)) return;
+    message.channel.send("passou")
     /**
      * BANIR INOMINÁVEL
      */
-    if (message.author.id == '397857347873013762'){ 
+     if (message.author.id == '397857347873013762'){ 
         message.channel.send(message.author.username & ', você está banido e impossibilitado de pedir música. VTNC')
         return
     }
@@ -56,11 +62,6 @@ client.on("message", async(message) => {
         message.channel.send(message.author.username & ', você está banido e impossibilitado de pedir música. VTNC')
         return
     }
-
-    if (!message.guild) return;
-
-    const prefixRegex = new RegExp(`^(<@!?${client.user.id}>|${escapeRegex(PREFIX)})\\s*`);
-    if (!prefixRegex.test(message.content)) return;
 
     const [, matchedPrefix] = message.content.match(prefixRegex);
 
