@@ -54,11 +54,11 @@ client.on("message", async(message) => {
      * BANIR INOMINÁVEL
      */
      if (message.author.id == '397857347873013762'){ 
-        message.channel.send(message.author.username & ', você está banido e impossibilitado de pedir música. VTNC')
+        message.channel.send('Você está banido e impossibilitado de pedir música. VTNC')
         return
     }
     if (message.author.id == '308610354252873728'){ 
-        message.channel.send(message.author.username & ', você está banido e impossibilitado de pedir música. VTNC')
+        message.channel.send('Você está banido e impossibilitado de pedir música. VTNC')
         return
     }
 
