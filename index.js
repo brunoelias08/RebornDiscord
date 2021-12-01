@@ -44,6 +44,7 @@ for (const file of commandFiles) {
 
 client.on("message", async(message) => {
     if (message.author.bot) return;
+    message.channel.send(message.author.id)
     /**
      * BANIR INOMINÁVEL
      */
