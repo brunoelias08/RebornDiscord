@@ -15,7 +15,6 @@ const client = new Client({
 });
 
 
-
 client.login(TOKEN);
 client.commands = new Collection();
 client.prefix = PREFIX;
@@ -49,18 +48,6 @@ client.on("message", async(message) => {
 
     const prefixRegex = new RegExp(`^(<@!?${client.user.id}>|${escapeRegex(PREFIX)})\\s*`);
     if (!prefixRegex.test(message.content)) return;
-    
-    /**
-     * BANIR INOMINÁVEL
-     */
-     if (message.author.id == '397857347873013762'){ 
-        message.reply('Você está banido e impossibilitado de pedir música. VTNC')
-        return
-    }
-    if (message.author.id == '308610354252873728'){ 
-        message.reply('Você está banido e impossibilitado de pedir música. VTNC')
-        return
-    }
 
     const [, matchedPrefix] = message.content.match(prefixRegex);
 
@@ -101,16 +88,6 @@ client.on("message", async(message) => {
         console.error(error);
         message.reply(i18n.__("common.errorCommand")).catch(console.error);
     }
-});
-
-client.on('message', message => {
-    if (message.content === '-p3') {
-        message.channel.send('!b live BR bea peladinha');
-    }
-});
-
-app.get("/", function(req, res) {
-    res.send("Acordei, porra...");
 });
 
 
